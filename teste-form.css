@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: cadetblue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #c1c1c1;
+  width: 500px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+  gap: 10px;
+  border-radius: 20px;
+}
+input {
+  border-radius: 20px;
+  height: 10%;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+}
+input:hover,
+input:focus {
+  background-color: darkcyan;
+  color: white;
+}
+
+::placeholder {
+  color: darkgray;
+}
+
+div {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+button {
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 20%;
+  overflow: hidden;
+  min-width: 39px;
+  min-height: 37px;
+}
+
+.enviar {
+  background-color: cadetblue;
+}
+
+.cancelar {
+  background-color: red;
+}
+.enviar:hover,
+.cancelar:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .enviar::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  .cancelar::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
+  .enviar,
+  .cancelar {
+    padding: 10px;
+    font-size: 0;
+  }
+
+  .enviar::before,
+  .cancelar::before {
+    font-size: 16px;
+  }
+}
