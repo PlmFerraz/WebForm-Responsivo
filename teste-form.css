@@ -7,21 +7,33 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: cadetblue;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 60%;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   background-color: #c1c1c1;
-  width: 500px;
-  height: 500px;
+  width: 75%;
+  height: 90%;
   align-items: center;
   justify-content: center;
-  margin: 100px;
   gap: 10px;
   border-radius: 20px;
 }
+
 input {
   border-radius: 20px;
   height: 10%;
@@ -31,7 +43,7 @@ input {
 }
 input:hover,
 input:focus {
-  background-color: darkcyan;
+  background-color: cornsilk;
   color: white;
 }
 
@@ -45,7 +57,7 @@ div {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 button {
@@ -70,6 +82,21 @@ button {
 .cancelar:hover {
   background-color: aliceblue;
   color: black;
+}
+
+textarea {
+  resize: none;
+  width: 75%;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+textarea:hover {
+  background-color: cornsilk;
+}
+
+textarea::-webkit-scrollbar {
+  border-radius: 15px;
 }
 
 @media (max-width: 600px) {
