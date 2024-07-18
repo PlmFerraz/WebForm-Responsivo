@@ -86,10 +86,11 @@ button {
 
 textarea {
   resize: none;
+  height: 50%;
   width: 75%;
   padding: 30px;
   border-radius: 15px;
-  text-align: center;
+  text-align: left;
 }
 textarea:hover {
   background-color: cornsilk;

@@ -5,12 +5,13 @@ botaoEnviar.onclick = function () {
   const campos = document.querySelectorAll("input");
   let texto = "";
 
+  const usuarios = {};
+
   for (let i = 0; i < campos.length; i++) {
     const elementoCampo = campos[i];
-    console.log(elementoCampo);
-    texto += elementoCampo.value;
+    usuarios[elementoCampo.placeholder.toLowerCase()] = elementoCampo.value;
   }
-  enviar(texto);
+  enviar(usuarios);
 };
 
 botaoEnviar.onmousedown = function () {
@@ -21,9 +22,14 @@ botaoEnviar.onmouseup = function () {
   botaoEnviar.classList.remove("button_ativo");
 };
 
-function enviar(texto) {
+function enviar(usuarios) {
   const areaDoTexto = document.getElementsByTagName("textarea")[0];
-  areaDoTexto.value = texto;
+  areaDoTexto.value = `
+  Nome: ${usuarios.nome}
+  Email: ${usuarios.email}
+  Telefone: ${usuarios.telefone}
+  Assunto: ${usuarios.assunto}
+  `;
 }
 
 botaoCancelar.onclick = function () {
