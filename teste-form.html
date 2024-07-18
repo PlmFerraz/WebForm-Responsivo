@@ -13,22 +13,26 @@
   </head>
   <body>
     <section>
-      <form>
+      <form method="submit">
         <input type="text" placeholder="Nome" />
         <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Senha" />
         <input type="tel" placeholder="Telefone" />
+        <input type="text" placeholder="Digite aqui o assunto" />
         <div>
-          <button class="enviar" method="submit">Enviar</button>
-          <button class="cancelar" method="cancel">Cancelar</button>
+          <button class="enviar">Enviar</button>
+          <button class="cancelar">Cancelar</button>
         </div>
       </form>
       <textarea
         class="areaDeTexto"
-        name=""
-        id=""
         placeholder="Resumo da solicitação"
       ></textarea>
     </section>
   </body>
+  <script src="./teste-form.js"></script>
+  <script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault();
+    });
+  </script>
 </html>

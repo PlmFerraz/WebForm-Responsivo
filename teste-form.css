@@ -44,7 +44,7 @@ input {
 input:hover,
 input:focus {
   background-color: cornsilk;
-  color: white;
+  color: black;
 }
 
 ::placeholder {
@@ -73,15 +73,15 @@ button {
 
 .enviar {
   background-color: cadetblue;
+  cursor: pointer;
+}
+.button_ativo {
+  opacity: 0.5;
 }
 
 .cancelar {
   background-color: red;
-}
-.enviar:hover,
-.cancelar:hover {
-  background-color: aliceblue;
-  color: black;
+  cursor: pointer;
 }
 
 textarea {
